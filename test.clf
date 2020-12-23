@@ -56,6 +56,8 @@ var myClass = Something();
 final alias = Other;
 
 final PI = 3.141592653589793238462643383279502;
+final PIf = 3.14_15_9_265358979_32384626_43383279_502; %% yey
+%% btw that is for cookey+ and up ^^
 final myLambda = lambda (a, b): a + b;
 final indeterminate = NaV;
 
@@ -68,3 +70,10 @@ test.method ();
 }
 
 exit 2;
+
+var d = 5;
+deleteVariable d;
+
+while (true) {
+  break;
+}
