@@ -33,6 +33,10 @@
 				"scopeName": "source.clf",
 				"path": "./src/syntaxes/cookey.tmLanguage.json"
 			}
+		],
+		"snippets": [
+			"language": "cookey",
+			"path": "./src/snippets/snippets.json"
 		]
 	},
 	"__metadata": {
