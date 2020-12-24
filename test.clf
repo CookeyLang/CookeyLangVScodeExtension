@@ -77,3 +77,19 @@ deleteVariable d;
 while (true) {
   break;
 }
+
+switch (false) {
+  case (true) { printLine("Was true"); }
+
+  default { printLine("Was false"); }
+}
+
+do {
+  printLine("I happen once!");
+} while (false);
+
+exit(5);
+
+do {
+  printLine("hi");
+} while (true);
