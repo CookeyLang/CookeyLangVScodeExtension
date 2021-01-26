@@ -93,3 +93,6 @@ exit(5);
 do {
   printLine("hi");
 } while (true);
+
+var curry = lambda (a): lambda (b): lambda (c): a + b + c;
+var largeNumber = 1_2;

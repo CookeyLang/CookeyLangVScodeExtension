@@ -53,5 +53,9 @@
 		"prefix": "ifel",
 		"body": "if (${1:condition}) {\n\t${3}\n} el if (${2:condition}) {\n\t${0}\n}",
 		"description": "If ... el ... statement"
+	},
+	"lambda": {
+		"prefix": "lambda",
+		"body": "lambda (${1:arguments}): ${0}"
 	}
 }

@@ -33,7 +33,7 @@
 				"match": "\\b(ret|or|and|deleteVariable|break|switch|case|default|do)\\b"
 			}, {
 				"name": "constant.numeric.cookey",
-				"match": "(?:\\d|_)(?:\\.(?:\\d|_)+)?"
+				"match": "\\d(?:\\d|_)*(?:\\.\\d(?:\\d|_)*)?"
 			}, {
 				"name": "keyword.operator.cookey",
 				"match": "[+*\\/=%\\-<>^;\\.{}()@?:]"
@@ -60,10 +60,10 @@
 				"match": "\\b(exit)\\b"
 			}, {
 				"name": "entity.name.class.cookey",
-				"match": "\\b([A-Z_][A-Za-z0-9_]*)\\b"
+				"match": "\\b(_?[A-Z]\\w*)\\b"
 			}, {
 				"name": "support.variable.cookey",
-				"match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b"
+				"match": "\\b([A-Za-z_]\\w*)\\b"
 			}]
 		},
 
@@ -102,7 +102,7 @@
 
 		"stmt": {
 			"patterns": [{
-				"match": "\\b(var|final)\\s+([A-Za-z_][A-Za-z0-9_]*)\\b",
+				"match": "\\b(var|final)\\s+([A-Za-z_]\\w*)\\b",
 				"captures": {
 					"1": {
 						"name": "storage.modifier.cookey"
@@ -112,7 +112,7 @@
 					}
 				}
 			}, {
-				"match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b\\s*\\(",
+				"match": "\\b([A-Za-z_]\\w*)\\b\\s*\\(",
 				"captures": {
 					"1": {
 						"name": "support.function.cookey"
@@ -126,7 +126,7 @@
 				"name": "keyword.control.cookey",
 				"match": "\\b(if|el|while|forrep|for)\\b"
 			}, {
-				"match": "\\b(class)\\s+([A-Za-z_][A-Za-z0-9_]*)(?:\\s+(extends)\\s+([A-Za-z_][A-Za-z0-9_]*))?\\b",
+				"match": "\\b(class)\\s+([A-Za-z_]\\w*)(?:\\s+(extends)\\s+([A-Za-z_][A-Za-z0-9_]*))?\\b",
 				"captures": {
 					"1": {
 						"name": "storage.type.class.cookey"
@@ -142,7 +142,7 @@
 					}
 				}
 			}, {
-				"match": "\\b(lambda)\\b\\s*\\((.*)\\)",
+				"match": "\\b(lambda)\\b\\s*\\(\\s*([a-zA-Z_]\\w*(?:\\s*,\\s*[a-zA-Z_]\\w*)*)\\s*\\)\\s*:",
 				"captures": {
 					"1": {
 						"name": "storage.type.lambda.cookey"
