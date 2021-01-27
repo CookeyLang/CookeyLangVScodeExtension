@@ -14,6 +14,9 @@
 		"include": "#keywords"
 	}, {
 		"include": "#shebang"
+	}, {
+		"match": ".",
+		"name": "invalid.illegal.cookey"
 	}],
 
 	"repository": {
@@ -36,7 +39,7 @@
 				"match": "\\d(?:\\d|_)*(?:\\.\\d(?:\\d|_)*)?"
 			}, {
 				"name": "keyword.operator.cookey",
-				"match": "[+*\\/=%\\-<>^;\\.{}()@?:]"
+				"match": "[+\\-*\\/%^=!<>;\\.{}()@?:,\\|]"
 			}, {
 				"name": "constant.language.boolean.cookey",
 				"match": "\\b(true|false)\\b"
@@ -112,7 +115,7 @@
 					}
 				}
 			}, {
-				"match": "\\b([A-Za-z_]\\w*)\\b\\s*\\(",
+				"match": "(?!\\blambda\\b)\\b([A-Za-z_]\\w*)\\b\\s*\\(",
 				"captures": {
 					"1": {
 						"name": "support.function.cookey"

@@ -88,6 +88,10 @@ do {
   printLine("I happen once!");
 } while (false);
 
+if (5 != 5) {
+  printLine("yikes!");
+}
+
 exit(5);
 
 do {
@@ -96,3 +100,14 @@ do {
 
 var curry = lambda (a): lambda (b): lambda (c): a + b + c;
 var largeNumber = 1_2;
+
+function callThreeTimes(fn) {
+  for (var i = 0; i < 5; i++) fn();
+}
+
+callThreeTimes(lambda (): {
+  printLine("Cookeylang is the best!");
+});
+
+%% todo: fix this syntax someday :(
+printLine("|-5| = " + @"string":|-5|);
